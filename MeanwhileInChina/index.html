@@ -1,0 +1,63 @@
+<!dOCTYPE html>
+	
+	<html lang="en">
+		<head>
+			<meta charset="urf-8">
+			
+			<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+				
+			<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.css" media="screen" title="jquery mobile" charset="utf-8">
+			<link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+		
+			<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>			
+			<script src="js/jquery-1.6.4.js" type="text/javascript" charset="utf-8"></script>
+		  	<script src="js/underscore.js" type="text/javascript" charset="utf-8"></script>
+		   	<script src="js/jquery.mobile-1.0rc1.js" type="text/javascript" charset="utf-8"></script>
+			   
+			<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+		
+			<title>meanwhileInChina</title>
+				
+			<link rel="apple-touch-icon" href="images/touchicon.png">
+			<link rel="shortcut icon" href="images/fav.ico" type="image/x-icon">
+		
+		</head>
+		
+		<body onload="initialize()">
+			
+			<div id="home" data-role="page" style="border: 1px solid black;">
+	
+				<div data-role="header">
+					<h1>Flip side</h1>
+					<a href="#" onclick="initialize()" id="locate" data-role="button" class="ui-btn-right" data-icon="refresh" data-theme="e" data-iconpos="right">Locate</a>
+					<a href="#flipside" data-role="button" class="ui-btn-left" data-icon="forward" data-theme="d" data-transition="flip">Flip</a>
+				</div>
+				
+				<div data-role="content" >
+					<div id="flipt_map_canvas" style="height:250px; width:250px;  border: 1px solid black;"></div>
+					<div id="flipt_results"></div>
+				</div>
+				
+			</div>
+			
+			<!--waar jij bent-->
+			
+			<div id="flipside" data-role="page" style="border: 1px solid black;">
+				
+				<div data-role="header">
+					<h1>Mijn locatie</h1>
+					<a href="#" onclick="initialize()" id="locate" data-role="button" class="ui-btn-right" data-icon="refresh" data-theme="e" data-iconpos="right">Locate</a>
+					<a href="#home" data-role="button" class="ui-btn-left" data-icon="forward" data-theme="d" data-transition="flip" >Flip</a>
+				</div>
+				
+				<div data-role="content">
+					<div id="map_canvas" style="height:250px; width:250px; border: 1px solid black;" ></div>
+					<div id="results"></div>
+				</div>
+			
+			</div>
+
+		</body>
+			
+
+	</html>
